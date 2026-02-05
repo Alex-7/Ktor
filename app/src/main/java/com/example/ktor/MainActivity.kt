@@ -35,37 +35,40 @@ class MainActivity : ComponentActivity() {
         setContent {
 
             var posts by remember { mutableStateOf(emptyList<Post>()) }
+
             LaunchedEffect(Unit) {
-                posts = KtorClient().getPosts()
+
+             posts = KtorClient().getPosts()
 
                 val postPost = KtorClient().postPost(
                     Post(
-                        body = "body",
-                        id = 1,
-                        title = "title",
-                        userId = 3
+                        body = "golf",
+                        id = 42,
+                        title = "ball",
+                        userId = 555
                     )
                 )
-                val patch = KtorClient().patch(
-                    mapOf("title" to "fjaskljflafafasfajslfk"),
-                    1
-                )
-                val put = KtorClient().put(
-                    Post(
-                        body = "body put",
-                        id = 1,
-                        title = "title put",
-                        userId = 3
-                    ),
-                    1
-                )
-                val delete = KtorClient().delete(1)
-                val comments = KtorClient().getComments(1)
-                Log.d("TAGGGGGGGG", "onCreate COMMENTS: ${comments}")
-                Log.d("TAGGGGGGG", "onCreate DELETE: ${delete.status.value}")
-                Log.d("TAGGGGGGGGGGG", "onCreate PATCH: ${patch}")
-                Log.d("TAGGGGGGGGGGG", "onCreate PUT: ${put}")
-                Log.d("TAGGGGGGGGG", "onCreate: ${postPost}")
+
+//                val patch = KtorClient().patch(
+//                    mapOf("title" to "fjaskljflafafasfajslfk"),
+//                    1
+//                )
+//                val put = KtorClient().put(
+//                    Post(
+//                        body = "body put",
+//                        id = 1,
+//                        title = "title put",
+//                        userId = 3
+//                    ),
+//                    1
+//                )
+//                val delete = KtorClient().delete(1)
+//                val comments = KtorClient().getComments(1)
+//                Log.d("TAGGGGGGGG", "onCreate COMMENTS: ${comments}")
+//                Log.d("TAGGGGGGG", "onCreate DELETE: ${delete.status.value}")
+//                Log.d("TAGGGGGGGGGGG", "onCreate PATCH: ${patch}")
+//                Log.d("TAGGGGGGGGGGG", "onCreate PUT: ${put}")
+                 Log.d("JUUG", "onCreate: ${postPost}")
 
             }
             KtorTheme {

@@ -66,10 +66,16 @@ dependencies {
     // implementation(platform("io.ktor:ktor-bom:3.1.2"))
     implementation(platform(libs.ktor.bom))
 
-    val ktorVersion = "3.1.2"
+
+    // K-tor
+    val ktorVersion = "3.2.2"
+
+    // implementation(platform("io.ktor:ktor-bom:3.1.2"))
+    implementation(platform("io.ktor:ktor-bom:$ktorVersion"))
+
 
     // implementation("io.ktor:ktor-client-android:$ktorVersion")
-    implementation(libs.ktor.client.android.v312)
+    implementation("io.ktor:ktor-client-android:$ktorVersion")
 
 
     // implementation("io.ktor:ktor-client-core:$ktorVersion")
@@ -91,12 +97,16 @@ dependencies {
 
     implementation("io.ktor:ktor-client-logging:$ktorVersion")
 
+    implementation("io.ktor:ktor-client-cio:$ktorVersion")
 
-//    val slf4j_version = "2.1.0-alpha1"
-//    implementation("org.slf4j:slf4j-android:$slf4j_version")
+    implementation("io.ktor:ktor-client-encoding:$ktorVersion")
 
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
+
+
+
+
+
 
 
 
